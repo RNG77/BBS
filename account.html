@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Log In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Media/Chukachu.png" type="image/png">
+</head>
+<body>
+    <header id="top">
+        <div class="header-inner">
+            <div class="brand">
+                <a href="homepage.html" title="Home">
+                    <img src="Media/Chukachu.png" alt="Chukachu" class="brand-logo">
+                </a>
+            </div>
+            <h1 class="site-title">Account</h1>
+            <nav>
+                <a href="homepage.html">Home</a>
+                <a href="about_us.html">About Us</a>
+                <a href="map.html">Map</a>
+                <a href="features.html">Features</a>
+                <a href="references.html">References</a>
+                <a href="contact.html">Contact</a>
+                <a href="account.html">Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Sign up or log in to save your Smart City ideas.</h2>
+                <p>Use this page to create a new account or access an existing one. Your account helps keep project notes and map ideas in one place.</p>
+                <div class="button-row">
+                    <button type="button" class="secondary-btn auth-toggle" data-target="login">Log in</button>
+                    <button type="button" class="primary-btn auth-toggle" data-target="signup">Sign up</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-section">
+            <div class="auth-card" id="login">
+                <h2>Log in</h2>
+                <form class="auth-form">
+                    <label for="login-email">Email address</label>
+                    <input id="login-email" type="email" placeholder="you@example.com" required>
+
+                    <label for="login-password">Password</label>
+                    <input id="login-password" type="password" placeholder="Enter your password" required>
+
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+            </div>
+
+            <div class="auth-card hidden" id="signup">
+                <h2>Create account</h2>
+                <form class="auth-form">
+                    <label for="signup-name">Full name</label>
+                    <input id="signup-name" type="text" placeholder="Your full name" required>
+
+                    <label for="signup-email">Email address</label>
+                    <input id="signup-email" type="email" placeholder="you@example.com" required>
+
+                    <label for="signup-password">Password</label>
+                    <input id="signup-password" type="password" placeholder="Choose a password" required>
+
+                    <label for="signup-confirm">Confirm password</label>
+                    <input id="signup-confirm" type="password" placeholder="Repeat your password" required>
+
+                    <button type="submit" class="submit-btn">Sign up</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Smart City</h3>
+                    <p>Dedicated to creating sustainable urban models for our community.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="references.html">Map Tool</a></li>
+                            <li><a href="references.html">Design Models</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Quick link</h4>
+                        <ul>
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="map.html">Map</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="references.html">References</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smart City Model. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" title="Facebook" target="_blank" rel="noopener noreferrer">
+                        <img src="Media/facebook.png" alt="Facebook logo">
+                    </a>
+                    <a href="https://www.x.com" title="X" target="_blank" rel="noopener noreferrer">
+                        <img src="Media/X.png" alt="X logo">
+                    </a>
+                    <a href="https://www.instagram.com" title="Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="Media/instagram logo.jpg" alt="Instagram logo">
+                    </a>
+                    <a href="https://www.tiktok.com" title="TikTok" target="_blank" rel="noopener noreferrer">
+                        <img src="Media/Tiktok logo.webp" alt="TikTok logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButtons = document.querySelectorAll('.auth-toggle');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.auth-card').forEach(card => card.classList.add('hidden'));
+                document.getElementById(button.dataset.target).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
